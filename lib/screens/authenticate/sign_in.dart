@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfirebase/services/auth.dart';
 import 'package:flutterfirebase/shared/constants.dart';
+import 'package:flutterfirebase/shared/loading.dart';
 
 class SignIn extends StatefulWidget {
 
@@ -17,10 +18,11 @@ class _SignInState extends State<SignIn> {
   String email='';
   String password='';
   String error='';
+  bool loading=false;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading(): Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
         backgroundColor: Colors.brown[900],
@@ -76,10 +78,15 @@ class _SignInState extends State<SignIn> {
               ),
                onPressed: ()async{
                  if(_formKey.currentState.validate()){
+                     setState(() {
+                       loading=true;
+                     });
                      dynamic result = await _auth.signInEmailPassword(email, password);
                    if(result==null){
+
                      print('empty');
                      setState(() {
+                       loading=false;
                        error="Credentials don't match any account";
                      });
                    }
