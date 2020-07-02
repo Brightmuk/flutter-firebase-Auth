@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfirebase/services/auth.dart';
+import 'package:flutterfirebase/shared/constants.dart';
 
 class SignIn extends StatefulWidget {
 
@@ -44,6 +45,7 @@ class _SignInState extends State<SignIn> {
           children: <Widget>[
             SizedBox(height:100),
             TextFormField(
+              decoration:textInputDeco.copyWith(hintText: 'Email'),
               validator: (val)=>val.isEmpty ? 'Enter an email':null,
               onChanged: (val){
                 setState(() {
@@ -55,6 +57,7 @@ class _SignInState extends State<SignIn> {
             ),
             SizedBox(height:20),
             TextFormField(
+              decoration:textInputDeco.copyWith(hintText: 'Password'),
               validator: (val)=>val.length<6 ? 'Password must have more than 6 chars ':null,
               obscureText: true,
               onChanged: (val){
@@ -64,7 +67,7 @@ class _SignInState extends State<SignIn> {
                 });
                 },
             ),
-            SizedBox(height:20),
+            SizedBox(height:30),
             RaisedButton(
               color:Colors.pink[400],
               child:Text(
