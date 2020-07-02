@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "172124361730",
+    "firebase_url": "https://fl-fire.firebaseio.com",
+    "project_id": "fl-fire",
+    "storage_bucket": "fl-fire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172124361730:android:e3cb1cf2dddcb3c344831b",
+        "android_client_info": {
+          "package_name": "com.brimuk.flutterfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172124361730-p626ak0ojpnp4aklf4hhsen727pqfe7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5ggxJBx2HknN83TgwedA7L2LvkTCHWZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172124361730-p626ak0ojpnp4aklf4hhsen727pqfe7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
